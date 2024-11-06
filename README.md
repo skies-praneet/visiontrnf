@@ -10,11 +10,9 @@ This code leverages PyTorch for implementing a Vision Transformer and employs mo
 
   ## Vision Transformer - Pytorch
 
-Implementation of <a href="https://openreview.net/pdf?id=YicbFdNTTy">Vision Transformer</a>, a simple way to achieve SOTA in vision classification with only a single transformer encoder, in Pytorch. Significance is further explained in <a href="https://www.youtube.com/watch?v=TrdevFK_am4">Yannic Kilcher's</a> video. There's really not much to code here, but may as well lay it out for everyone so we expedite the attention revolution.
+Implementation: <a href="https://openreview.net/pdf?id=YicbFdNTTy">Vision Transformer</a>, to achieve SOTA in vision classification w/ only a single transformer encoder, in Pytorch. Significance: <a href="https://www.youtube.com/watch?v=TrdevFK_am4">Yannic Kilcher's</a> video. (Not much code here)
 
-For a Pytorch implementation with pretrained models, please see Ross Wightman's repository <a href="https://github.com/rwightman/pytorch-image-models">here</a>.
-
-The official Jax repository is <a href="https://github.com/google-research/vision_transformer">here</a>.
+implementation w/ pretrained models:<a href="https://github.com/rwightman/pytorch-image-models">here</a>.
 
 A tensorflow2 translation also exists <a href="https://github.com/taki0112/vit-tensorflow">here</a>, created by research scientist <a href="https://github.com/taki0112">Junho Kim</a>! 🙏
 
@@ -76,9 +74,14 @@ Embedding dropout rate.
 
 ## Simple ViT
 
-<a href="https://arxiv.org/abs/2205.01580">An update</a> from some of the same authors of the original paper proposes simplifications to `ViT` that allows it to train faster and better.
+<a href="https://arxiv.org/abs/2205.01580">An update</a> authors of original paper  `ViT` trains faster and better.
 
-Among these simplifications include 2d sinusoidal positional embedding, global average pooling (no CLS token), no dropout, batch sizes of 1024 rather than 4096, and use of RandAugment and MixUp augmentations. They also show that a simple linear at the end is not significantly worse than the original MLP head
+Includes
+-2d sinusoidal positional embedding
+-global average pooling (no CLS token)
+-no dropout, batch sizes of 1024 rather than 4096
+- use of RandAugment and MixUp augmentations
+- show that a simple linear at the end is not significantly worse than the original MLP head
 
 You can use it by importing the `SimpleViT` as shown below
 
